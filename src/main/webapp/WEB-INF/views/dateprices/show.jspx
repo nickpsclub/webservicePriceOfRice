@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_spt_priceofriceservice_domain_DatePrice" object="${dateprice}" path="/dateprices" z="nL2tOJH523C379VKuFQKp+0UyxA=">
+        <field:display field="dateCode" id="s_com_spt_priceofriceservice_domain_DatePrice_dateCode" object="${dateprice}" z="Lu0zWVBwijNi3bmh8H/zL0qICMw="/>
+        <field:display date="true" dateTimePattern="${datePrice_dateofprice_date_format}" field="dateOfPrice" id="s_com_spt_priceofriceservice_domain_DatePrice_dateOfPrice" object="${dateprice}" z="SuyLQwA3bkUW4GvjFWVv38w6mLg="/>
+    </page:show>
+</div>

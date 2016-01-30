@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_spt_priceofriceservice_domain_SeedRice" items="${seedrices}" z="K7CgEnhDIj4DKFL2Z3RqsTZgb2I=">
+        <table:table data="${seedrices}" id="l_com_spt_priceofriceservice_domain_SeedRice" path="/seedrices" z="sTgxhyb0M1br5JRfoSTZpDo2G5A=">
+            <table:column id="c_com_spt_priceofriceservice_domain_SeedRice_seedRiceCode" property="seedRiceCode" z="bEmsB8HnB+wUi/T+S3aVzWimK+w="/>
+            <table:column id="c_com_spt_priceofriceservice_domain_SeedRice_seedRiceName" property="seedRiceName" z="zhQSkMRMhGYYtE+LIPbcFqH4HEw="/>
+        </table:table>
+    </page:list>
+</div>

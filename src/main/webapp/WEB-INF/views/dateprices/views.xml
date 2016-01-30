@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="dateprices/list">
+        <put-attribute name="body" value="/WEB-INF/views/dateprices/list.jspx"/>
+    </definition>
+<definition extends="default" name="dateprices/show">
+        <put-attribute name="body" value="/WEB-INF/views/dateprices/show.jspx"/>
+    </definition>
+<definition extends="default" name="dateprices/create">
+        <put-attribute name="body" value="/WEB-INF/views/dateprices/create.jspx"/>
+    </definition>
+<definition extends="default" name="dateprices/update">
+        <put-attribute name="body" value="/WEB-INF/views/dateprices/update.jspx"/>
+    </definition>
+</tiles-definitions>

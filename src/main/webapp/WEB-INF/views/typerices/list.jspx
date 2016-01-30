@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_spt_priceofriceservice_domain_TypeRice" items="${typerices}" z="QzGJ90iVMcEBPN6IgS2x1sCWfxM=">
+        <table:table data="${typerices}" id="l_com_spt_priceofriceservice_domain_TypeRice" path="/typerices" z="Q1ZoktW0QGrc+37Ou1fUg6gsElE=">
+            <table:column id="c_com_spt_priceofriceservice_domain_TypeRice_typeRiceCode" property="typeRiceCode" z="CIDQs1a3z5tCY7WmqAKKqYYTZ+I="/>
+            <table:column id="c_com_spt_priceofriceservice_domain_TypeRice_typeRiceName" property="typeRiceName" z="H2NaEhAvrbNYgk+Y8+qWqVoQclo="/>
+            <table:column id="c_com_spt_priceofriceservice_domain_TypeRice_description" property="description" z="Q2IFWQuOhWF1VG7gdEPbNmzlZYA="/>
+            <table:column id="c_com_spt_priceofriceservice_domain_TypeRice_seedRice" property="seedRice" z="g2sLvGwGDfjd4/ft9EWYKAAEqE4="/>
+        </table:table>
+    </page:list>
+</div>

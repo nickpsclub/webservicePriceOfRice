@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_spt_priceofriceservice_domain_TypeRice" object="${typerice}" path="/typerices" z="FSOGkA8praghmtKT6YwfYK8K+mM=">
+        <field:display field="typeRiceCode" id="s_com_spt_priceofriceservice_domain_TypeRice_typeRiceCode" object="${typerice}" z="BwmtusC1qfgZpBFzA7zGeApB/Go="/>
+        <field:display field="typeRiceName" id="s_com_spt_priceofriceservice_domain_TypeRice_typeRiceName" object="${typerice}" z="vwgI4bmI/FjUvp/4//BIJdW3mHw="/>
+        <field:display field="description" id="s_com_spt_priceofriceservice_domain_TypeRice_description" object="${typerice}" z="U6Vv5rkpdZ8iku51CUBPevHgZnk="/>
+        <field:display field="seedRice" id="s_com_spt_priceofriceservice_domain_TypeRice_seedRice" object="${typerice}" z="9IZB0lgnAfBQx6ca427x4XFy6M8="/>
+    </page:show>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_spt_priceofriceservice_domain_PricePerDay" modelAttribute="pricePerDay" path="/priceperdays" versionField="Version" z="26fO/797uvaRM2ePqfv3Ra/eEXI=">
+        <field:input field="price" id="c_com_spt_priceofriceservice_domain_PricePerDay_price" validationMessageCode="field_invalid_number" z="oGUBtPrBcml9Dsp9inK4iMYF+NM="/>
+        <field:select field="datePrice" id="c_com_spt_priceofriceservice_domain_PricePerDay_datePrice" itemValue="id" items="${dateprices}" path="/dateprices" z="HlBz5s71JuLsOjqpbxQIe632YtE="/>
+        <field:select field="typeRice" id="c_com_spt_priceofriceservice_domain_PricePerDay_typeRice" itemValue="id" items="${typerices}" path="/typerices" z="tIrLbtfvYc3TS3ooA7hGEAvMTSI="/>
+    </form:update>
+</div>

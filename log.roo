@@ -1,0 +1,48 @@
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-01-30 01:40:03
+project --topLevelPackage com.spt.priceofriceservice --projectName WebservicePriceOfRice --java 7
+persistence setup --provider HIBERNATE --database DERBY_EMBEDDED
+entity jpa --class ~base.BaseEntity --abstract --mappedSuperclass --activeRecord
+field string createdBy
+field string updatedBy
+field string status
+field date --fieldName createdDate --type java.util.Date --dateFormat SHORT --dateTimeFormatPattern "dd/MM/yyyy"
+field date --fieldName updatedDate --type java.util.Date --dateFormat SHORT --dateTimeFormatPattern "dd/MM/yyyy"
+entity jpa --class ~.domain.SeedRice --testAutomatically 
+field string --fieldName seedRiceCode
+field string --fieldName seedRiceName
+entity jpa --class ~.domain.TypeRice --testAutomatically 
+field string --fieldName typeRiceCode
+field string --fieldName typeRiceName
+field string --fieldName description
+entity jpa --class ~.domain.PricePerDay
+field number --fieldName price --type java.lang.Double
+// [failed] entity jpa --class ~.domain.Date
+entity jpa --class ~.domain.DatePrice
+field string --fieldName dateCode
+focus --class ~.domain.SeedRice
+field set --fieldName typeRice --type ~.domain.TypeRice --cardinality ONE_TO_MANY --fetch LAZY --mappedBy seedRice
+focus --class ~.domain.TypeRice
+field reference --fieldName seedRice --type ~.domain.SeedRice --cardinality MANY_TO_ONE --fetch LAZY --joinColumnName seedRice
+focus --class ~.domain.DatePrice
+field set --fieldName pricePerDay --type ~.domain.PricePerDay --cardinality ONE_TO_MANY --fetch LAZY --mappedBy datePrice
+focus --class ~.domain.PricePerDay
+field reference --fieldName datePrice --type ~.domain.DatePrice --cardinality MANY_TO_ONE --fetch LAZY --joinColumnName datePrice
+focus --class ~.domain.TypeRice
+field set --fieldName pricePerDay --type ~.domain.PricePerDay --cardinality ONE_TO_MANY --fetch LAZY --mappedBy pricePerDay
+focus --class ~.domain.PricePerDay
+field reference --fieldName typeRice --type ~.domain.TypeRice --cardinality MANY_TO_ONE --fetch LAZY --joinColumnName typeRice
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-01-30 02:07:46
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-01-30 02:07:57
+focus --class ~.domain.TypeRice
+field set --fieldName pricePerDay --type ~.domain.PricePerDay --cardinality ONE_TO_MANY --fetch LAZY --mappedBy typeRice
+json all --deepSerialize 
+web mvc json setup
+web mvc json all --package ~.web
+web mvc setup
+web mvc all --package ~.web
+focus --class ~.domain.DatePrice
+// [failed] field date --fieldName date --type java.util.Date --dateFormat SHORT --dateTimeFormatPattern "dd/MM/yyyy"
+field date --fieldName dateOfPrice --type java.util.Date --dateFormat SHORT --dateTimeFormatPattern "dd/MM/yyyy"
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-01-30 02:14:22
