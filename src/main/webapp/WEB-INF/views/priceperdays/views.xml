@@ -13,4 +13,7 @@
 <definition extends="default" name="priceperdays/update">
         <put-attribute name="body" value="/WEB-INF/views/priceperdays/update.jspx"/>
     </definition>
+<definition extends="public" name="priceperdays/priceperdayInsert">
+        <put-attribute name="body" value="/WEB-INF/views/priceperdays/priceperdayInsert.jspx"/>
+    </definition>
 </tiles-definitions>

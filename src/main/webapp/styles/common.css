@@ -1,0 +1,20 @@
+@font-face {
+	font-family: WRTishKid;
+	src: url('../fonts/WRTishKid.ttf')
+	format('truetype');
+}
+
+@font-face {
+	font-family: SketchBlock;
+	src: url('../fonts/SketchBlock.ttf')
+	format('truetype');
+}
+
+@font-face {
+	font-family: Kanyanut;
+	src: url('../fonts/Kanyanut.ttf')
+	format('truetype');
+}
+
+
+

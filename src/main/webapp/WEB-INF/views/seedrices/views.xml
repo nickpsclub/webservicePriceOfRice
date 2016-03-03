@@ -13,4 +13,7 @@
 <definition extends="default" name="seedrices/update">
         <put-attribute name="body" value="/WEB-INF/views/seedrices/update.jspx"/>
     </definition>
+<definition extends="public" name="seedrices/seedriceInsert">
+        <put-attribute name="body" value="/WEB-INF/views/seedrices/seedriceInsert.jspx"/>
+    </definition>
 </tiles-definitions>

@@ -13,4 +13,7 @@
 <definition extends="default" name="typerices/update">
         <put-attribute name="body" value="/WEB-INF/views/typerices/update.jspx"/>
     </definition>
+<definition extends="public" name="typerices/typericeInsert">
+        <put-attribute name="body" value="/WEB-INF/views/typerices/typericeInsert.jspx"/>
+    </definition>
 </tiles-definitions>

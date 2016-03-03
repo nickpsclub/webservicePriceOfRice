@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+
+    <spring:url value="/resources/scripts/webservicePriceOfRice/priceperday.js" var="Priceperday"/>
+
+    <c:set var="LABEL_AddData"><spring:message  javaScriptEscape="true" code="M00001"/></c:set>
+    <c:set var="LABEL_EditData"><spring:message  javaScriptEscape="true" code="M00002"/></c:set>
+    <c:set var="LABEL_Edit"><spring:message  javaScriptEscape="true" code="M00003"/></c:set>
+    <c:set var="LABEL_OK"><spring:message  javaScriptEscape="true" code="M00004"/></c:set>
+    <c:set var="LABEL_Cancel"><spring:message  javaScriptEscape="true" code="M00005"/></c:set>
+    <c:set var="LABEL_Next"><spring:message  javaScriptEscape="true" code="M00006"/></c:set>
+    <c:set var="LABEL_Success"><spring:message  javaScriptEscape="true" code="M00007"/></c:set>
+    <c:set var="LABEL_Fail"><spring:message  javaScriptEscape="true" code="M00008"/></c:set>
+    <c:set var="LABEL_ConfirmDelete"><spring:message  javaScriptEscape="true" code="M00009"/></c:set>
+    <c:set var="LABEL_PleaseSelect"><spring:message  javaScriptEscape="true" code="M00010"/></c:set>
+    <c:set var="LABEL_Deleteing"><spring:message  javaScriptEscape="true" code="M00011"/></c:set>
+    <c:set var="LABEL_Record"><spring:message  javaScriptEscape="true" code="M00012"/></c:set>
+    <c:set var="LABEL_DeleteSuccess"><spring:message  javaScriptEscape="true" code="M00013"/></c:set>
+
+    <script>
+        var Message = {};
+        Message.Success = '${LABEL_Success}';
+        Message.Fail = '${LABEL_Fail}';
+        Message.ConfirmDelete = '${LABEL_ConfirmDelete}';
+        Message.PleaseSelect = '${LABEL_PleaseSelect}';
+        Message.OK = '${LABEL_OK}';
+        Message.Deleteing = '${LABEL_Deleteing}';
+        Message.Recode = '${LABEL_Record}';
+        Message.DeleteSuccess = '${LABEL_DeleteSuccess}';
+        Message.Cancel = '${LABEL_Cancel}';
+     
+    </script>
+
+	<br/>
+		<div class="container">
+			<div class="intro-text">
+		    	<div class="row">
+		    		<div class="col s12">
+						<div class="col s12 z-depth-2" id="table">
+							<div class="input-field col s2 offset-s10">
+								<a>วันที่</a>
+			      				<input type="date" class="datepicker" id="datepicker"/>
+			    			</div>
+
+							<center>
+							<div class="col s12">
+							  	<div class="progress">
+							    	<div class="indeterminate"></div>
+							  	</div>
+							</div>
+		        
+							<a class="btn-floating btn-large waves-effect waves-light red" id="btnAddSeedRice" style="margin-left:10px"><i class="material-icons">add</i></a>
+							<a class="btn-floating btn-large waves-effect waves-light red" id="btnDeleteSeedRice" style="margin-left:10px"><i class="material-icons">remove</i></a>
+							</center>
+							<table class="bordered">
+						        <thead>
+						          	<tr>
+						          		<th data-field="checkbox"><input type="checkbox" class="filled-in" id="checkBoxAll"/><label for="checkBoxAll"></label></th>
+							            <th data-field="edit">${LABEL_Edit}</th>
+							            <th data-field="name">${LABEL_SeedCode}</th>
+							            <th data-field="price">${LABEL_SeedName}</th>
+						          	</tr>
+						        </thead>
+						        <tbody id="tableDataSeedRice">
+						        	 <jsp:text/>
+						        </tbody>
+							</table>
+						</div>					
+					</div> 
+		    	</div>
+	    	</div>
+		</div>
+    <script src="${Priceperday}" type="text/javascript"><!--Not Empty --></script>
+
+</div>

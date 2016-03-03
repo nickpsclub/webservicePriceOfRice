@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+
+    <spring:url value="/resources/scripts/webservicePriceOfRice/typerice.js" var="TypeRice"/>
+
+    <c:set var="LABEL_AddData"><spring:message  javaScriptEscape="true" code="M00001"/></c:set>
+    <c:set var="LABEL_EditData"><spring:message  javaScriptEscape="true" code="M00002"/></c:set>
+    <c:set var="LABEL_Edit"><spring:message  javaScriptEscape="true" code="M00003"/></c:set>
+    <c:set var="LABEL_OK"><spring:message  javaScriptEscape="true" code="M00004"/></c:set>
+    <c:set var="LABEL_Cancel"><spring:message  javaScriptEscape="true" code="M00005"/></c:set>
+    <c:set var="LABEL_Next"><spring:message  javaScriptEscape="true" code="M00006"/></c:set>
+    <c:set var="LABEL_Success"><spring:message  javaScriptEscape="true" code="M00007"/></c:set>
+    <c:set var="LABEL_Fail"><spring:message  javaScriptEscape="true" code="M00008"/></c:set>
+    <c:set var="LABEL_ConfirmDelete"><spring:message  javaScriptEscape="true" code="M00009"/></c:set>
+    <c:set var="LABEL_PleaseSelect"><spring:message  javaScriptEscape="true" code="M00010"/></c:set>
+    <c:set var="LABEL_Deleteing"><spring:message  javaScriptEscape="true" code="M00011"/></c:set>
+    <c:set var="LABEL_Record"><spring:message  javaScriptEscape="true" code="M00012"/></c:set>
+    <c:set var="LABEL_DeleteSuccess"><spring:message  javaScriptEscape="true" code="M00013"/></c:set>
+
+    <script>
+        var Message = {};
+        Message.Success = '${LABEL_Success}';
+        Message.Fail = '${LABEL_Fail}';
+        Message.ConfirmDelete = '${LABEL_ConfirmDelete}';
+        Message.PleaseSelect = '${LABEL_PleaseSelect}';
+        Message.OK = '${LABEL_OK}';
+        Message.Deleteing = '${LABEL_Deleteing}';
+        Message.Recode = '${LABEL_Record}';
+        Message.DeleteSuccess = '${LABEL_DeleteSuccess}';
+        Message.Cancel = '${LABEL_Cancel}';
+     
+    </script>
+    
+    <br/>
+    <div class="container">
+		<div class="intro-text">
+		   	<div class="row">
+			  	<ul class="collapsible" data-collapsible="accordion">
+				    <li>
+				      	<div class="collapsible-header teal lighten-5"><i class="material-icons">search</i>เงื่อนไขในการค้นหา</div>
+				      	<div class="collapsible-body teal white ">
+				      		<div class="row">	
+					  			<p>	
+					  				<div class="input-field col s4 offset-s4">
+									    <select id="selectDataSeedRice">
+									    	<jsp:text/>
+									    </select>
+									    <label>กรุณาเลือกพันธุ์ข้าวสารเพื่อค้นหา</label>
+									</div>
+					  			</p>
+				  			</div>
+				      	</div>
+				    </li>
+				</ul>
+				<div class="col s12">
+					<div class="col s12 z-depth-2" id="table">
+						<center>
+						<h2 class="header">ประเภทข้าวสาร</h2>	
+						<div class="col s12">
+						  	<div class="progress">
+						    	<div class="indeterminate"></div>
+						  	</div>
+						</div>
+						<a class="btn-floating btn-large waves-effect waves-light red" id="btnAddTypeRice" style="margin-left:10px"><i class="material-icons">add</i></a>
+						<a class="btn-floating btn-large waves-effect waves-light red" id="btnDeleteTypeRice" style="margin-left:10px"><i class="material-icons">remove</i></a>
+						</center>
+						<table class="bordered">
+					        <thead>
+					          	<tr>
+					          		<th data-field="checkbox"><input type="checkbox" class="filled-in" id="checkBoxAll"/><label for="checkBoxAll"></label></th>
+						            <th data-field="edit">${LABEL_Edit}</th>
+						            <th data-field="name">ประเภทข้าวสาร</th>
+						            <th data-field="price">ชื่อประเภทข้าวสาร</th>
+						            <th data-field="des">รายละเอียด</th>
+					          	</tr>
+					        </thead>
+					        <tbody id="tableDataTypeRice">
+					        	 <jsp:text/>
+					        </tbody>
+						</table>
+					</div>					
+				</div> 
+			</div>
+		</div>
+	</div>
+              
+	<div id="modalAddDataTypeRice" class="modal modal-fixed-footer">
+	    <div class="modal-content">
+	    	<div class="row">
+	      	<h4>${LABEL_AddData}</h4>
+	      	<form class="col s12">
+	      	  	<div class="input-field col s4 offset-s4">
+				    <select id="selectAddDataSeedRice">
+				    	<jsp:text/>
+				    </select>
+				    <label>กรุณาเลือกพันธุ์ข้าวสาร</label>
+			  	</div>
+			</form>
+	      	<form class="col s6">
+      			<div class="row">
+      				<div class="input-field col s12">
+      					<i class="material-icons prefix">mode_edit</i>
+			          	<input id="typeRiceCode" type="text" class="validate" length="5" maxlength="5"/>
+			          	<label for="typeRiceCode">รหัสประเภทข้าวสาร</label>
+			        </div>
+      			</div>
+      			<div class="row">
+      				<div class="input-field col s12">
+      					<i class="material-icons prefix">mode_edit</i>
+			          	<input id="typeRiceName" type="text" class="validate" length="15" maxlength="15"/>
+			          	<label for="typeRiceName">ชื่อประเภทข้าวสาร</label>
+			        </div>
+			    </div>
+      		</form>
+      		<form class="col s6">
+		      	<div class="row">
+		        	<div class="input-field col s12">
+		          		<i class="material-icons prefix">mode_edit</i>
+		          		<textarea id="description" class="materialize-textarea" length="100" maxlength="100"><jsp:text/></textarea>
+		          		<label for="description">รายละเอียด</label>
+		        	</div>
+		      	</div>
+		    </form>
+      		</div>
+	    </div>
+	    <div class="modal-footer">
+	      	<a id="btnNext" class="waves-effect waves-light btn" style="margin-left:10px">${LABEL_Next}</a>
+	    	<a id="btnCancel" class="waves-effect waves-light btn modal-close" style="margin-left:10px">${LABEL_Cancel}</a>
+	      	<a id="btnSave" class="waves-effect waves-light btn">${LABEL_OK}</a>
+	    </div>
+  	</div>
+
+  	<div id="modalAddTypeRiceEdit" class="modal modal-fixed-footer">
+	    <div class="modal-content">
+	    	<div class="row">
+	      	<h4>${LABEL_EditData}</h4>
+	      	<form class="col s12">
+	      	  	<div class="input-field col s4 offset-s4">
+				    <select id="selectEditDataSeedRice">
+				    	<jsp:text/>
+				    </select>
+				    <label>กรุณาเลือกพันธุ์ข้าวสาร</label>
+			  	</div>
+			</form>
+	      	<form class="col s6">
+      			<div class="row">
+      				<div class="input-field col s12">
+      					<i class="material-icons prefix">mode_edit</i>
+			          	<input id="typeRiceCodeEdit" type="text" class="validate" length="5" maxlength="5"/>
+			          	<label for="typeRiceCodeEdit">รหัสประเภทข้าวสาร</label>
+			        </div>
+      			</div>
+      			<div class="row">
+      				<div class="input-field col s12">
+      					<i class="material-icons prefix">mode_edit</i>
+			          	<input id="typeRiceNameEdit" type="text" class="validate" length="15" maxlength="15"/>
+			          	<label for="typeRiceNameEdit">ชื่อประเภทข้าวสาร</label>
+			        </div>
+			    </div>
+      		</form>
+      		<form class="col s6">
+		      	<div class="row">
+		        	<div class="input-field col s12">
+		          		<i class="material-icons prefix">mode_edit</i>
+		          		<textarea id="descriptionEdit" class="materialize-textarea" length="100" maxlength="100"><jsp:text/></textarea>
+		          		<label for="descriptionEdit">รายละเอียด</label>
+		        	</div>
+		      	</div>
+		    </form>
+      		</div>
+	    </div>
+	    <div class="modal-footer">
+	    	<a id="btnCancelEdit" class="waves-effect waves-light btn modal-close" style="margin-left:10px">${LABEL_Cancel}</a>
+	      	<a id="btnSaveEdit" class="waves-effect waves-light btn">${LABEL_OK}</a>
+	    </div>
+  	</div>
+
+	<script src="${TypeRice}" type="text/javascript"><!--Not Empty --></script>
+</div>
