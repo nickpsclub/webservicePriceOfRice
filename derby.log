@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Fri Mar 04 00:33:03 ICT 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0153-3d8a-3f81-00000b7b46b8 
-on database directory /home/nick/ProjectNorthBKK/webservicePriceOfRice/WebservicePriceOfRice  with class loader WebAppClassLoader=WebservicePriceOfRice@6b4feafa 
+Fri Mar 04 21:28:20 ICT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0153-4207-7cf6-000010f08ba8 
+on database directory /home/nick/ProjectNorthBKK/webservicePriceOfRice/WebservicePriceOfRice  with class loader WebAppClassLoader=WebservicePriceOfRice@2e12acda 
 Loaded from file:/home/nick/.m2/repository/org/apache/derby/derby/10.8.2.2/derby-10.8.2.2.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.7.0_71-b14

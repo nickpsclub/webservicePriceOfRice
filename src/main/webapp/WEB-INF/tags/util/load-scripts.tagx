@@ -25,10 +25,6 @@
   <link rel="stylesheet" type="text/css" href="${priceOfRice_css_url}" />
   <link rel="stylesheet" type="text/css" href="${common_css_url}" />
   <link rel="stylesheet" type="text/css" href="${sweetalert_css_url}" />
-
-
-
-
  
 
   <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->

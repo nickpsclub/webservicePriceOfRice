@@ -1,0 +1,54 @@
+<aspectj>
+<aspects>
+<aspect name="com.spt.priceofriceservice.domain.SeedRice_Roo_Json"/>
+<aspect name="com.spt.priceofriceservice.web.SeedRiceController_Roo_Controller"/>
+<aspect name="com.spt.priceofriceservice.domain.TypeRice_Roo_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.DatePrice_Roo_JavaBean"/>
+<aspect name="com.spt.priceofriceservice.domain.TypeRice_Roo_JavaBean"/>
+<aspect name="com.spt.priceofriceservice.web.SeedRiceController_Roo_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="com.spt.priceofriceservice.domain.TypeRice_Custom_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.domain.DatePrice_Roo_Jpa_Entity"/>
+<aspect name="com.spt.priceofriceservice.web.DatePriceController_Roo_Controller"/>
+<aspect name="com.spt.priceofriceservice.domain.PricePerDay_Roo_Jpa_Entity"/>
+<aspect name="com.spt.priceofriceservice.web.PricePerDayController_Roo_Controller"/>
+<aspect name="com.spt.priceofriceservice.web.PricePerDayController_Custom_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.PricePerDay_Roo_ToString"/>
+<aspect name="com.spt.priceofriceservice.base.BaseEntity_Roo_Jpa_Entity"/>
+<aspect name="com.spt.priceofriceservice.web.DatePriceController_Roo_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.TypeRice_Roo_Configurable"/>
+<aspect name="com.spt.priceofriceservice.web.SeedRiceController_Custom_Controller"/>
+<aspect name="com.spt.priceofriceservice.domain.SeedRice_Roo_Jpa_Entity"/>
+<aspect name="com.spt.priceofriceservice.domain.SeedRice_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.domain.PricePerDay_Roo_JavaBean"/>
+<aspect name="com.spt.priceofriceservice.web.DatePriceController_Custom_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.web.TypeRiceController_Roo_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.SeedRice_Roo_ToString"/>
+<aspect name="com.spt.priceofriceservice.domain.PricePerDay_Roo_Configurable"/>
+<aspect name="com.spt.priceofriceservice.web.PricePerDayController_Custom_Controller"/>
+<aspect name="com.spt.priceofriceservice.domain.DatePrice_Roo_ToString"/>
+<aspect name="com.spt.priceofriceservice.web.TypeRiceController_Custom_Controller"/>
+<aspect name="com.spt.priceofriceservice.web.TypeRiceController_Roo_Controller"/>
+<aspect name="com.spt.priceofriceservice.web.PricePerDayController_Roo_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.DatePrice_Roo_Configurable"/>
+<aspect name="com.spt.priceofriceservice.domain.TypeRice_Roo_ToString"/>
+<aspect name="com.spt.priceofriceservice.base.BaseEntity_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.domain.PricePerDay_Roo_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.SeedRice_Roo_Configurable"/>
+<aspect name="com.spt.priceofriceservice.domain.DatePrice_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.base.BaseEntity_Roo_ToString"/>
+<aspect name="com.spt.priceofriceservice.web.TypeRiceController_Custom_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.DatePrice_Custom_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.domain.PricePerDay_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.web.SeedRiceController_Custom_Controller_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.PricePerDay_Custom_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.domain.TypeRice_Roo_Jpa_Entity"/>
+<aspect name="com.spt.priceofriceservice.base.BaseEntity_Roo_JavaBean"/>
+<aspect name="com.spt.priceofriceservice.base.BaseEntity_Roo_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.DatePrice_Roo_Json"/>
+<aspect name="com.spt.priceofriceservice.domain.TypeRice_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.spt.priceofriceservice.domain.SeedRice_Roo_JavaBean"/>
+<aspect name="com.spt.priceofriceservice.base.BaseEntity_Roo_Configurable"/>
+</aspects>
+</aspectj>
+
