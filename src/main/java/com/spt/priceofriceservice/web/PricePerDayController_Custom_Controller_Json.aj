@@ -33,7 +33,7 @@ privileged aspect PricePerDayController_Custom_Controller_Json {
         return new ResponseEntity<String>((new JSONSerializer()
             .include("id")
             .include("datePrice.id")
-            .include("typeRice.id")
+            .include("typeRice.typeRiceName")
             .include("price")
             .exclude("*")
             .deepSerialize(result)),headers, HttpStatus.OK);

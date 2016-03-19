@@ -8264,7 +8264,7 @@ button.btn-floating {
 }
 
 .dropdown-content li > a, .dropdown-content li > span {
-  font-size: 16px;
+  font-size: 22px;
   color: #26a69a;
   display: block;
   line-height: 22px;
@@ -8588,7 +8588,7 @@ a.waves-effect .waves-ripple {
 
 .collapsible-header i {
   width: 2rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 3rem;
   display: block;
   float: left;
@@ -8782,7 +8782,7 @@ textarea.materialize-textarea {
   outline: none;
   height: 3rem;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 0 15px 0;
   padding: 0;
   box-shadow: none;
@@ -9016,13 +9016,13 @@ textarea.materialize-textarea + label:after {
   position: absolute;
   top: 0.8rem;
   left: 0.75rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: text;
   transition: .2s ease-out;
 }
 
 .input-field label.active {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   -webkit-transform: translateY(-140%);
           transform: translateY(-140%);
 }
@@ -9526,7 +9526,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   height: 3rem;
   line-height: 3rem;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0 0 15px 0;
   padding: 0;
   display: block;
@@ -9546,8 +9546,8 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
 
 .select-wrapper + label {
   position: absolute;
-  top: -14px;
-  font-size: 0.8rem;
+  top: -19px;
+  font-size: 1.5rem;
 }
 
 select {

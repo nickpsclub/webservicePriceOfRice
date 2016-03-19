@@ -12,6 +12,7 @@ import org.hibernate.criterion.*;
 import org.hibernate.Session;
 import org.hibernate.Criteria;
 
+
 privileged aspect DatePrice_Custom_Jpa_ActiveRecord {
     
     public static List<DatePrice> DatePrice.findDateByDay(String day) {
@@ -22,6 +23,26 @@ privileged aspect DatePrice_Custom_Jpa_ActiveRecord {
     criteria.add(codeRestriction);
     return criteria.list();
     }
+
+    public static DatePrice DatePrice.findDuplicateByCodeDate(String codeDate) {
+    Session session = (Session) DatePrice.entityManager().getDelegate();
+    Criteria criteria = session.createCriteria(DatePrice.class);
+
+    Criterion codeRestriction = Restrictions.eq("dateCode", codeDate);
+    criteria.add(codeRestriction);
+
+    DatePrice result = (DatePrice) criteria.uniqueResult();
+    return result;
+    }
+
+    // public static DatePrice DatePrice.findDuplicateByCodeDate(String codeDate){
+
+    // EntityManager entityManager = DatePrice.entityManager();
+    // Criteria criteria = ((Session) entityManager.getDelegate()).createCriteria(DatePrice.class);
+    // criteria.add(Restrictions.eq("dateCode", codeDate));
+    // DatePrice  test = (DatePrice)criteria.uniqueResult();
+    // return test;
+    // }
 
     
 }

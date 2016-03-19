@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.util.UriComponentsBuilder;
 import flexjson.JSONSerializer;
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 
 privileged aspect DatePriceController_Custom_Controller_Json {
@@ -42,17 +43,27 @@ privileged aspect DatePriceController_Custom_Controller_Json {
     
     @RequestMapping(value = "/saveData", method = RequestMethod.GET, headers = "Accept=application/json") 
     @ResponseBody
-    public ResponseEntity<String> DatePriceController.saveData( @RequestParam("dateCode") String dateCode, 
-                                                        @RequestParam("dateOfPrice") Long dateOfPrice){
+    public ResponseEntity<String> DatePriceController.saveData(@RequestParam("dateOfPrice") Long dateOfPrice){
+        
+        String dateCodeSave = "";
+
         HttpHeaders headers = new HttpHeaders(); 
         headers.add("Content-Type", "application/json; charset=utf-8");
 
         Date date = new Date(dateOfPrice);
+        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+        String dateformat = DATE_FORMAT.format(date);
+        
+        for(String dateCodeSplit : dateformat.split("-")){
+            if(dateCodeSplit.length()>0){
+                dateCodeSave = dateCodeSave+""+dateCodeSplit;
+            }
+        }
 
         DatePrice saveDatePrice = new DatePrice();
 
         saveDatePrice.setVersion(0);
-        saveDatePrice.setDateCode(dateCode);
+        saveDatePrice.setDateCode(dateCodeSave);
         saveDatePrice.setDateOfPrice(date);
         saveDatePrice.persist();
 
@@ -61,6 +72,35 @@ privileged aspect DatePriceController_Custom_Controller_Json {
             .exclude("*") 
             .deepSerialize(saveDatePrice)),headers, HttpStatus.OK); 
     }
+
+
+    @RequestMapping(value = "/findDuplicateByCodeDate", method = RequestMethod.GET, headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String>DatePriceController.findDuplicateByCodeDate(@RequestParam(value="codeDate", required = false)Long codeDate) {
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+
+        String dateCodeSave = "";
+        Date date = new Date(codeDate);
+        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+        String dateformat = DATE_FORMAT.format(date);
+        for(String dateCodeSplit : dateformat.split("-")){
+            if(dateCodeSplit.length()>0){
+                dateCodeSave = dateCodeSave+""+dateCodeSplit;
+            }
+        }
+        DatePrice result = DatePrice.findDuplicateByCodeDate(dateCodeSave);
+
+        return new ResponseEntity<String>((new JSONSerializer()
+            .include("id")
+            .include("dateCode")
+            .include("dateOfPrice")
+            .exclude("*")
+            .deepSerialize(result)),headers, HttpStatus.OK);
+    }
+
+
 
     @RequestMapping(value = "/findAllDatePrices", method = RequestMethod.GET, headers = "Accept=application/json")
     @ResponseBody
